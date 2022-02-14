@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Pizza delivery</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="notification_title">TrackingPosition</string>
+    <string name="notification_message">Tracking  position</string>
+    <string name="ticker_text">ABOBA</string>
+</resources>
