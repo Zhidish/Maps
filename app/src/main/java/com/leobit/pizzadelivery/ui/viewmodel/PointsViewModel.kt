@@ -40,19 +40,24 @@ class PointsViewModel(val dao: PointsDao, val cluster: ClusterManager<Points>) :
     internal fun checkAllPositions(latLng: LatLng) {
         allPositions.value?.forEach {
             if (getDistanceFromLatLonInKm(
-                    latLng.latitude,
-                    latLng.longitude,
-                    it.latitude,
-                    it.longitude
+                    latLng.latitude, latLng.longitude, it.latitude, it.longitude
                 ) <= 20
             ) {
                 point = it
                 isPizzaPoint = true
+                return
             } else {
                 isPizzaPoint = false
             }
-
         }
+    }
+
+
+    fun clearTable() {
+        viewModelScope.launch {
+            dao.deleteAllColumns()
+        }
+
     }
 
     fun getDistanceFromLatLonInKm(lat1: Double, lon1: Double, lat2: Double, lon2: Double): Double {

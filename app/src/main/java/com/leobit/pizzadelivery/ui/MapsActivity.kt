@@ -180,7 +180,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, DeliveryDialong.No
                 googleMap,
                 clusterManager
             )
-
+        viewModel.clearTable()
         clusterManager.markerCollection.setInfoWindowAdapter(MarkerInfoAdapter(this))
 
 
@@ -378,7 +378,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, DeliveryDialong.No
               viewModel.addPoints(it)
           }
 
-        var listLiveData = mutableListOf<List<Points>>()
+
         viewModel.getPoints()
         viewModel.allPositions.observe(this, Observer {
             clusterManager.addItems(it)
