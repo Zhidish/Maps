@@ -4,4 +4,7 @@
     <string name="notification_title">TrackingPosition</string>
     <string name="notification_message">Tracking  position</string>
     <string name="ticker_text">ABOBA</string>
+    <string name="deliver_pizza">Deliver Pizza</string>
+    <string name="deliver_pizza_cancel">deliver pizza cancel</string>
+    <string name="pizza_house">You are near delivery point</string>
 </resources>

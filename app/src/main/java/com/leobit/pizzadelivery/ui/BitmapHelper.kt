@@ -1,4 +1,4 @@
-package com.leobit.pizzadelivery
+package com.leobit.pizzadelivery.ui
 
 import android.content.Context
 import android.graphics.Bitmap
@@ -25,6 +25,7 @@ object BitmapHelper {
             Log.e("BitmapHelper", "Resource not found")
             return BitmapDescriptorFactory.defaultMarker()
         }
+
         val bitmap = Bitmap.createBitmap(
             vectorDrawable.intrinsicWidth,
             vectorDrawable.intrinsicHeight,
